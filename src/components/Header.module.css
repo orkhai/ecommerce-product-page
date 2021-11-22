@@ -1,0 +1,35 @@
+header {
+  height: 4rem;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background: url(../images/icon-menu.svg) no-repeat center;
+}
+
+.cart {
+  border: none;
+  background: transparent;
+}
+
+.icon {
+  /* height: 4rem;
+  width: 4rem; */
+}
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.06rem 0.47rem;
+  border-radius: 1.8rem;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  position: relative;
+  bottom: 0.89rem;
+  right: 0.75rem;
+}
