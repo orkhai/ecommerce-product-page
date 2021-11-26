@@ -1,0 +1,44 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 66%;
+  z-index: 20;
+  padding: 1.5rem;
+  background: hsl(0, 0%, 100%);
+  transition: all 1s ease-in;
+  animation: slidein 0.3s ease-in forwards;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin-top: 4.5rem;
+  display: block;
+  list-style: none;
+  text-align: left;
+}
+
+.sidebar li {
+  margin: 0 0 1.2rem 0;
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -11,3 +11,25 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 16px;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0 8rem;
+  }
+}

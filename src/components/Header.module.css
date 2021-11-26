@@ -1,25 +1,61 @@
 header {
   height: 4rem;
-  background-color: aqua;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  padding: 0;
+  height: 2rem;
+  width: 1rem;
+  z-index: 30;
+  border: none;
+  background: url(../images/icon-menu.svg) no-repeat left;
+}
+
+.menu_clicked {
+  padding: 0;
+  height: 2rem;
+  width: 1rem;
+  z-index: 30;
+  border: none;
+  background: url(../images/icon-close.svg) no-repeat left;
+}
+
+.logo {
+  margin: 0 0 0 -2.2rem;
+}
+
+ul {
+  display: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+li:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 2.2rem;
+  border-bottom: 0.25rem solid hsl(26, 100%, 55%);
+}
+
+header div {
   display: flex;
   align-items: center;
 }
 
-.menu {
-  height: 2rem;
-  width: 2rem;
-  border: none;
-  background: url(../images/icon-menu.svg) no-repeat center;
-}
-
 .cart {
+  width: 2.8rem;
+  margin: 0;
+  padding: 0;
   border: none;
   background: transparent;
-}
-
-.icon {
-  /* height: 4rem;
-  width: 4rem; */
 }
 
 .badge {
@@ -32,4 +68,85 @@ header {
   position: relative;
   bottom: 0.89rem;
   right: 0.75rem;
+}
+
+.avatar {
+  height: 2rem;
+  width: 2rem;
+}
+
+.avatar:hover {
+  border-radius: 50%;
+  border: 0.16rem solid hsl(26, 100%, 55%);
+  cursor: pointer;
+}
+
+@media (max-width: 337px) {
+  .logo {
+    height: 1.3rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 300px) {
+  header {
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    padding: 0;
+    height: 6rem;
+    border-bottom: 0.0625rem solid hsl(220, 14%, 75%);
+  }
+
+  .menu,
+  .menu_clicked {
+    display: none;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0 0 0 -3.5rem;
+    padding: 0;
+    width: 21rem;
+    color: hsl(219, 9%, 45%);
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .cart {
+    margin-right: 1rem;
+  }
+
+  .avatar {
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  ul {
+    margin: 0 0 0 -8rem;
+    width: 24rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  ul {
+    margin: 0 0 0 -12rem;
+    width: 26rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  ul {
+    margin: 0 0 0 -18rem;
+    width: 26rem;
+  }
 }
