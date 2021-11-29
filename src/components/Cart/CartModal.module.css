@@ -1,11 +1,11 @@
 .cart_modal {
   position: absolute;
   top: 4.8rem;
-  left: 0.68rem;
-  height: 18rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 17rem;
   width: 94%;
   border-radius: 0.6rem;
-  margin: auto;
   background: white;
 }
 
@@ -83,4 +83,17 @@
   color: hsl(0, 0%, 100%);
   font-family: inherit;
   border: none;
+}
+
+@media (max-width: 320px) {
+  .cart_filled .thumbnail {
+    height: 3.9rem;
+    width: 3.9rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .cart_modal {
+    width: 72%;
+  }
 }

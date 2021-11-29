@@ -8,6 +8,36 @@
   align-items: center;
 }
 
+.container_two {
+  height: 21rem;
+  padding: 0 0.8rem;
+  background: url(../images//image-product-2.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_three {
+  height: 21rem;
+  padding: 0 0.8rem;
+  background: url(../images//image-product-3.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container_four {
+  height: 21rem;
+  padding: 0 0.8rem;
+  background: url(../images//image-product-4.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .prev {
   height: 2.5rem;
   width: 2.5rem;
