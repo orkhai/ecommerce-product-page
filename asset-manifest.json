@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/ecommerce-product-page/static/css/main.6f2cd1d9.chunk.css",
-    "main.js": "/ecommerce-product-page/static/js/main.1aa964ae.chunk.js",
-    "main.js.map": "/ecommerce-product-page/static/js/main.1aa964ae.chunk.js.map",
+    "main.css": "/ecommerce-product-page/static/css/main.e263215f.chunk.css",
+    "main.js": "/ecommerce-product-page/static/js/main.3d1e82d3.chunk.js",
+    "main.js.map": "/ecommerce-product-page/static/js/main.3d1e82d3.chunk.js.map",
     "runtime-main.js": "/ecommerce-product-page/static/js/runtime-main.f2eaada0.js",
     "runtime-main.js.map": "/ecommerce-product-page/static/js/runtime-main.f2eaada0.js.map",
     "static/js/2.8b89e3bf.chunk.js": "/ecommerce-product-page/static/js/2.8b89e3bf.chunk.js",
     "static/js/2.8b89e3bf.chunk.js.map": "/ecommerce-product-page/static/js/2.8b89e3bf.chunk.js.map",
     "index.html": "/ecommerce-product-page/index.html",
-    "static/css/main.6f2cd1d9.chunk.css.map": "/ecommerce-product-page/static/css/main.6f2cd1d9.chunk.css.map",
+    "static/css/main.e263215f.chunk.css.map": "/ecommerce-product-page/static/css/main.e263215f.chunk.css.map",
     "static/js/2.8b89e3bf.chunk.js.LICENSE.txt": "/ecommerce-product-page/static/js/2.8b89e3bf.chunk.js.LICENSE.txt",
     "static/media/icon-cart.b7f75d6e.svg": "/ecommerce-product-page/static/media/icon-cart.b7f75d6e.svg",
     "static/media/Header.module.css": "/ecommerce-product-page/static/media/icon-menu.c6107d03.svg",
     "static/media/CartModal.module.css": "/ecommerce-product-page/static/media/icon-delete.1fd1f1f7.svg",
     "static/media/icon-minus.f5073aa8.svg": "/ecommerce-product-page/static/media/icon-minus.f5073aa8.svg",
-    "static/media/Main.module.css": "/ecommerce-product-page/static/media/image-product-1.520cc50b.jpg",
+    "static/media/Main.module.css": "/ecommerce-product-page/static/media/image-product-4.9962862e.jpg",
     "static/media/icon-plus.b297868c.svg": "/ecommerce-product-page/static/media/icon-plus.b297868c.svg",
     "static/media/logo.4fe9c1e8.svg": "/ecommerce-product-page/static/media/logo.4fe9c1e8.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f2eaada0.js",
     "static/js/2.8b89e3bf.chunk.js",
-    "static/css/main.6f2cd1d9.chunk.css",
-    "static/js/main.1aa964ae.chunk.js"
+    "static/css/main.e263215f.chunk.css",
+    "static/js/main.3d1e82d3.chunk.js"
   ]
 }
