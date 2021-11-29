@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./Main.module.css";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
@@ -6,15 +6,37 @@ import cart from "../images/icon-cart.svg";
 import CartContext from "../store/cart-context";
 
 const Main = () => {
+  const [bg, setBg] = useState(classes.container);
+
   const cartCtx = useContext(CartContext);
   const newItemCount = cartCtx.itemCount;
+
+  const nextImgHandler = () => {
+    if (bg === classes.container) {
+      setBg(classes.container_two);
+    } else if (bg === classes.container_two) {
+      setBg(classes.container_three);
+    } else if (bg === classes.container_three) {
+      setBg(classes.container_four);
+    }
+  };
+
+  const prevImgHandler = () => {
+    if (bg === classes.container_four) {
+      setBg(classes.container_three);
+    } else if (bg === classes.container_three) {
+      setBg(classes.container_two);
+    } else if (bg === classes.container_two) {
+      setBg(classes.container);
+    }
+  };
 
   return (
     <main>
       <div className={classes.container_thumbnails}>
-        <div className={classes.container}>
-          <button className={classes.prev}></button>
-          <button className={classes.next}></button>
+        <div className={`${bg}`}>
+          <button onClick={prevImgHandler} className={classes.prev}></button>
+          <button onClick={nextImgHandler} className={classes.next}></button>
         </div>
 
         <div className={classes.thumbnails}>
