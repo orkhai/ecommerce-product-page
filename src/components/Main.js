@@ -1,12 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import classes from "./Main.module.css";
 import minus from "../images/icon-minus.svg";
 import plus from "../images/icon-plus.svg";
 import cart from "../images/icon-cart.svg";
 import CartContext from "../store/cart-context";
+import LightboxModal from "../UI/LightboxModal";
 
 const Main = () => {
   const [bg, setBg] = useState(classes.container);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const cartCtx = useContext(CartContext);
   const newItemCount = cartCtx.itemCount;
@@ -31,19 +33,75 @@ const Main = () => {
     }
   };
 
+  const thumbnailOneHandler = () => {
+    setBg(classes.container);
+  };
+
+  const thumbnailTwoHandler = () => {
+    setBg(classes.container_two);
+  };
+
+  const thumbnailThreeHandler = () => {
+    setBg(classes.container_three);
+  };
+
+  const thumbnailFourHandler = () => {
+    setBg(classes.container_four);
+  };
+
+  const lightboxHandler = () => {
+    setIsLightboxOpen((prevState) => !prevState);
+  };
+
   return (
     <main>
-      <div className={classes.container_thumbnails}>
+      <div className={classes.mobile_container}>
         <div className={`${bg}`}>
+          <button onClick={prevImgHandler} className={classes.prev}></button>
+          <button onClick={nextImgHandler} className={classes.next}></button>
+        </div>
+      </div>
+
+      {isLightboxOpen && (
+        <Fragment>
+          <button
+            onClick={lightboxHandler}
+            className={classes.lightbox_close}
+          ></button>
+          <LightboxModal />
+        </Fragment>
+      )}
+      <div className={classes.container_thumbnails}>
+        <div onClick={lightboxHandler} className={`${bg}`}>
           <button onClick={prevImgHandler} className={classes.prev}></button>
           <button onClick={nextImgHandler} className={classes.next}></button>
         </div>
 
         <div className={classes.thumbnails}>
-          <div className={classes.thumbnail_one}></div>
-          <div className={classes.thumbnail_two}></div>
-          <div className={classes.thumbnail_three}></div>
-          <div className={classes.thumbnail_four}></div>
+          <div
+            onClick={thumbnailOneHandler}
+            className={`${classes.thumbnail_one}  ${
+              bg === classes.container && classes.thumbnail_active
+            }`}
+          ></div>
+          <div
+            onClick={thumbnailTwoHandler}
+            className={`${classes.thumbnail_two}  ${
+              bg === classes.container_two && classes.thumbnail_active
+            }`}
+          ></div>
+          <div
+            onClick={thumbnailThreeHandler}
+            className={`${classes.thumbnail_three}  ${
+              bg === classes.container_three && classes.thumbnail_active
+            }`}
+          ></div>
+          <div
+            onClick={thumbnailFourHandler}
+            className={`${classes.thumbnail_four}  ${
+              bg === classes.container_four && classes.thumbnail_active
+            }`}
+          ></div>
         </div>
       </div>
 

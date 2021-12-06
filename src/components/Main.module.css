@@ -1,3 +1,7 @@
+.container_thumbnails {
+  display: none;
+}
+
 .container {
   height: 21rem;
   padding: 0 0.8rem;
@@ -38,6 +42,13 @@
   align-items: center;
 }
 
+.container:hover,
+.container_two:hover,
+.container_three:hover,
+.container_four:hover {
+  cursor: pointer;
+}
+
 .prev {
   height: 2.5rem;
   width: 2.5rem;
@@ -54,11 +65,8 @@
   background: white url(../images//icon-next.svg) no-repeat center;
 }
 
-.thumbnails {
-  display: none;
-}
-
 .thumbnails div:hover {
+  opacity: 50%;
   cursor: pointer;
 }
 
@@ -146,6 +154,7 @@ h4 {
   background: hsl(26, 100%, 55%);
   color: hsl(0, 0%, 100%);
   fill: hsl(0, 0%, 100%);
+  box-shadow: 0 1.3rem 1rem hsl(25, 100%, 94%);
   font-family: inherit;
   border: none;
   display: flex;
@@ -157,12 +166,27 @@ h4 {
   margin-right: 1rem;
 }
 
+.add:hover {
+  background: hsl(26, 100%, 65%);
+}
+
 @media (min-width: 768px) {
   main {
     padding: 4rem 3rem 0;
   }
 
-  .container {
+  .mobile_container {
+    display: none;
+  }
+
+  .container_thumbnails {
+    display: block;
+  }
+
+  .container,
+  .container_two,
+  .container_three,
+  .container_four {
     height: 30rem;
     border-radius: 1rem;
   }
@@ -210,6 +234,16 @@ h4 {
     background-size: cover;
   }
 
+  .thumbnail_active::after {
+    position: absolute;
+    content: "";
+    height: 5.7rem;
+    width: 5.7rem;
+    border-radius: 0.7rem;
+    background: hsla(0, 0%, 100%, 0.5);
+    border: 2.5px solid hsl(26, 100%, 55%);
+  }
+
   .price {
     display: block;
   }
@@ -231,6 +265,18 @@ h4 {
 
   .add {
     margin: 0 0 0 2rem;
+  }
+
+  .lightbox_close {
+    height: 1.5rem;
+    width: 1.5rem;
+    position: fixed;
+    bottom: 90vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    border: none;
+    background: url(../images//icon-close.svg) no-repeat center;
   }
 }
 
@@ -270,5 +316,14 @@ h4 {
 
   main section {
     width: 41%;
+  }
+
+  .lightbox_close {
+    bottom: 95vh;
+  }
+
+  .thumbnail_active::after {
+    height: 5.7rem;
+    width: 5.7rem;
   }
 }

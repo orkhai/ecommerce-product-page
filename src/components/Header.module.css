@@ -21,7 +21,7 @@ header {
   width: 1rem;
   z-index: 30;
   border: none;
-  background: url(../images/icon-close.svg) no-repeat left;
+  background: url(../images/icon-menu-close.svg) no-repeat left;
 }
 
 .logo {

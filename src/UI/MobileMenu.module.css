@@ -7,7 +7,6 @@
   z-index: 20;
   padding: 1.5rem;
   background: hsl(0, 0%, 100%);
-  transition: all 1s ease-in;
   animation: slidein 0.3s ease-in forwards;
 }
 
