@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://orkhai.github.io/ecommerce-product-page/)
+- Solution URL: [https://www.frontendmentor.io/solutions/ecommerce-product-page-built-with-react-Ulqlcb1nc](https://www.frontendmentor.io/solutions/ecommerce-product-page-built-with-react-Ulqlcb1nc)
+- Live Site URL: [https://orkhai.github.io/ecommerce-product-page](https://orkhai.github.io/ecommerce-product-page)
 
 ## My process
 
